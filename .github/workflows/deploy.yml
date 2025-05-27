@@ -19,7 +19,7 @@
           aws-region: us-east-1
 
       - name: 🔑 Login to Amazon ECR
-        run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.REPOSITORY }}
+        run: aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 338797194545.dkr.ecr.eu-north-1.amazonaws.com
 
       - name: 📦 Publish Docker Image to Amazon ECR
         working-directory: ./BookManager/
